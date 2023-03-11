@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata modelVersion="1.1.0">
-  <groupId>com.drobucs</groupId>
-  <artifactId>com.drobucs.base</artifactId>
+  <groupId>com.drobucs.web.apps</groupId>
+  <artifactId>com.drobucs.web.apps.histology</artifactId>
   <version>1.0-SNAPSHOT</version>
   <versioning>
     <snapshot>
-      <timestamp>20230308.150856</timestamp>
+      <timestamp>20230311.114646</timestamp>
       <buildNumber>1</buildNumber>
     </snapshot>
-    <lastUpdated>20230308150856</lastUpdated>
+    <lastUpdated>20230311114646</lastUpdated>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.0-20230308.150856-1</value>
-        <updated>20230308150856</updated>
+        <value>1.0-20230311.114646-1</value>
+        <updated>20230311114646</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.0-20230308.150856-1</value>
-        <updated>20230308150856</updated>
+        <value>1.0-20230311.114646-1</value>
+        <updated>20230311114646</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
