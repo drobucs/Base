@@ -1,5 +1,6 @@
 package com.drobucs.base.time;
 
+@SuppressWarnings("unused")
 public class Time {
     public static final long SECOND = 1000L;
     public static final long MINUTE = 60L * SECOND;

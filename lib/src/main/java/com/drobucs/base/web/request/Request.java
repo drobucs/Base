@@ -4,12 +4,14 @@ import com.drobucs.base.error.Error;
 import com.drobucs.base.error.ErrorMessage;
 import com.drobucs.base.function.FunctionIOE;
 import com.drobucs.base.web.client.Client;
+import com.drobucs.web.apps.histology.users.RegisterResult;
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
+
 @SuppressWarnings("unused")
 public abstract class Request {
     protected final String url;
@@ -18,6 +20,18 @@ public abstract class Request {
         this.url = url;
     }
 
+    public RequestResult<RegisterResult> executeRegisterRequest(@NotNull okhttp3.Request request) {
+        return execute(
+                request,
+                body ->   {
+                    try {
+                        return RequestResult.noErrors(RegisterResult.valueOf(body.string()));
+                    } catch (IllegalArgumentException e) {
+                        return new RequestResult<>(null, Error.EXCEPTION_ERROR, e.getMessage());
+                    }
+                }
+        );
+    }
 
     private RequestResult<Integer> executeInteger(@NotNull okhttp3.Request request) {
         return execute(
@@ -64,7 +78,7 @@ public abstract class Request {
         }
     }
 
-    protected RequestResult<Integer> executeInteger() {
+    public RequestResult<Integer> executeInteger() {
         return executeInteger(getRequest());
     }
 
