@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>com.drobucs.web.apps</groupId>
-  <artifactId>com.drobucs.web.apps.histology</artifactId>
+  <groupId>com.drobucs</groupId>
+  <artifactId>com.drobucs.base</artifactId>
   <versioning>
     <versions>
       <version>1.0-SNAPSHOT</version>
     </versions>
-    <lastUpdated>20230311182300</lastUpdated>
+    <lastUpdated>20230311183226</lastUpdated>
   </versioning>
 </metadata>
