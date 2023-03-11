@@ -20,7 +20,7 @@ public abstract class Request {
         this.url = url;
     }
 
-    public RequestResult<RegisterResult> executeRegisterRequest(@NotNull okhttp3.Request request) {
+    private RequestResult<RegisterResult> executeRegisterResult(@NotNull okhttp3.Request request) {
         return execute(
                 request,
                 body ->   {
@@ -85,6 +85,8 @@ public abstract class Request {
     public RequestResult<Long> executeLong() {
         return executeLong(getRequest());
     }
-
+    public RequestResult<RegisterResult> executeRegisterResult() {
+        return executeRegisterResult(getRequest());
+    }
     protected abstract okhttp3.Request getRequest();
 }
